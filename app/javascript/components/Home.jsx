@@ -1,23 +1,23 @@
-import React from "react";
+import React, {Component} from "react";
+import JobSource from "./JobSource.jsx";
 import { Link } from "react-router-dom";
 
-export default () => (
-  <div className="vw-100 vh-100 primary-color d-flex align-items-center justify-content-center">
-    <div className="jumbotron jumbotron-fluid bg-transparent">
-      <div className="container secondary-color">
-        <h1 className="display-4">hi</h1>
-        <p className="lead">
-          it be like that 
-        </p>
-        <hr className="my-4" />
-        <Link
-          to="/recipes"
-          className="btn btn-lg custom-button"
-          role="button"
-        >
-          View Recipes
-        </Link>
+import jobSourceData from '../../../lib/assets/jobBoards.json'
+
+class Home extends Component {
+  render () {
+    let sources = [];
+    jobSourceData.job_boards.forEach(function(jb) {
+      sources.push(jb);
+    });
+    return (
+      <div className="job-boards-wrapper">
+        {sources.map(item => <JobSource key={item.name} jbdata ={item}/>)}
       </div>
-    </div>
-  </div>
-);
+    )
+  }
+
+}
+
+export default Home;
+
