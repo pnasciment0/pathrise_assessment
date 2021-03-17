@@ -12,7 +12,8 @@ require File.join(BASE_FILE_PATH, "../app/modules/job_source.rb")
 
 JobOpp.destroy_all
 
-csvPath = File.join(BASE_FILE_PATH, "../lib/assets/job_source_resolution.csv")
+# csvPath = File.join(BASE_FILE_PATH, "../lib/assets/job_source_resolution.csv")
+csvPath = File.join("lib/assets/job_source_resolution.csv")
 
 if File.exist?(csvPath)
     seeded = 0
