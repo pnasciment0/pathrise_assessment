@@ -33,4 +33,6 @@ if File.exist?(csvPath)
     end
 
     p "Successfully seeded Job table with #{seeded} records."
+else
+    p "No CSV found, nothing done."
 end

@@ -79,4 +79,4 @@ end
 module JobSource 
 end
 
-puts "Successfully outputted job_source_resolution.csv"
+puts "Successfully outputted job_source_resolution.csv to #{File.join(BASE_FILE_PATH, "../../lib/assets/job_source_resolution.csv"}"
