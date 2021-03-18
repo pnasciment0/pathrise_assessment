@@ -5,18 +5,21 @@ class JobSource extends Component {
   render () {
     let jobSourceData = this.props.jbdata;
     let name = jobSourceData.name;
-    let toUrl = name;
-    // let toUrl = name.toLowerCase().replace(/ /g, "-"); //turns "Google" into "google", in order to view jobs at /google
+    let rating = jobSourceData.rating;
+    let imgUrl = jobSourceData.logo_file;
+    let description = jobSourceData.description;
+
     return (
       <HashRouter>
-        <Link to={toUrl}>
-          <div className="job-source-wrapper">
-            <p>{jobSourceData.name}</p>
-            <p>{jobSourceData.rating}</p>
-            <p>{jobSourceData.description}</p>
-            <img src={jobSourceData.logo_file}/>
-          </div>
-        </Link>  
+        <div className="job-board"> 
+          <Link className="card link-to-jb" to={name}> {/* Use job name as URL to match database */}
+              <p className= {rating.toLowerCase() + " rating"}>{rating}</p>
+              <div className="info-wrapper">
+               <img className="logo" src={imgUrl}/> 
+                <p className="description">{description}</p>
+              </div>
+          </Link>  
+        </div>
       </HashRouter>
     )
   }

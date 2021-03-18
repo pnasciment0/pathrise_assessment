@@ -11,7 +11,7 @@ class Home extends Component {
       sources.push(jb);
     });
     return (
-      <div className="job-boards-wrapper">
+      <div className="all-job-boards">
         {sources.map(item => <JobSource key={item.name} jbdata ={item}/>)}
       </div>
     )

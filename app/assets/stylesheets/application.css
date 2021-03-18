@@ -14,42 +14,76 @@
  *= require_self
  */
 body {
-  background-color: #cccccc;
+  background-color: #eeeeee!important;
 }
 
- .bg_primary-color {
-    background-color: #FFFFFF;
-  }
-  .primary-color {
-    background-color: #FFFFFF;
-  }
-  .bg_secondary-color {
-    background-color: #293241;
-  }
-  .secondary-color {
-    color: #293241;
-  }
-  .custom-button.btn {
-    background-color: #293241;
-    color: #FFF;
-    border: none;
-  }
-  .custom-button.btn:hover {
-    color: #FFF !important;
-    border: none;
-  }
-  .hero {
-    width: 100vw;
-    height: 50vh;
-  }
-  .hero img {
-    object-fit: cover;
-    object-position: top;
-    height: 100%;
-    width: 100%;
-  }
-  .overlay {
-    height: 100%;
-    width: 100%;
-    opacity: 0.4;
-  }
+a {
+  color: black !important;
+}
+
+a:hover{
+  text-decoration: none !important;
+}
+
+.all-job-boards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 95px 75px;
+}
+
+.job-board {
+  /* max-height: 165px;
+  max-width: 400px;
+  min-height: 165px;
+  min-width: 400px; */
+  margin: 0 25px 15px 0;
+}
+
+.info-wrapper {
+  display: flex;
+  padding: 30px 20px 0 20px;
+}
+
+.rating {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.great {
+  color: green;
+}
+
+.good {
+  color: orange;
+}
+
+.okay {
+  color: red;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  margin-right: 20px;
+}
+
+.description {
+  font-size: 11px;
+}
+
+.link-to-jb {
+  max-height: 165px;
+  width: 390px;
+  min-height: 165px;
+  box-shadow: 1px 1px #dddddd;
+}
+
+
+
+
+
+ 
