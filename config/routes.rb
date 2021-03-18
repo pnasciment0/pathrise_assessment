@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'job_opps/index'
-      get 'job_opps/:id', to: 'job_opps#show'
+      get 'job_opps/:job_source', to: 'job_opps#jobsbyboard'
     end
   end
   root 'homepage#index'

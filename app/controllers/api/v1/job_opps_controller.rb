@@ -4,18 +4,9 @@ class Api::V1::JobOppsController < ApplicationController
     render json: opps
   end
 
-  def show
-    if jobopp
-      render json: jobopp
-    else
-      render json: jobopp.errors
-    end
-  end
-
-  private
-
-  def jobopp
-    @jobopp ||= JobOpp.find(params[:id])
+  def jobsbyboard
+    jobs = JobOpp.where("job_source = ?", params[:job_source])
+    render json: jobs
   end
 
 end
