@@ -16,7 +16,7 @@ Paulo Nascimento's submission for the Pathrise Software Engineer Take-Home Asses
 
 ### Notes
 
-The app successfully loads in all the job sources, and provides extra webpages for each one to list all of the associated job lists. The app runs fast and is clearly organized/structured. React components made development easy, as the same code handles the logic for all job boards. The Rails-built API offers an index to display all the job lists, as well as a method to search for jobs by job board name. The React on Rails architecture centralizes both the backend and frontend code to simplify logic and prevent from having to run two webservers on development. 
+The app successfully loads in all the job sources, and provides extra webpages for each one to list all of the associated job lists. It is clearly organized/structured, as the React on Rails architecture centralizes both the backend and frontend code to simplify logic. This also saves from having to deploy the front and back end code to different serving solutions, and provides an easy URL path for both the API and the frontend, something that other architectures might not offer. The API offers an index to display all the job lists in the database, as well as a method to search for jobs by job board name. 
 
 ## b. Job Source Resolution
 
