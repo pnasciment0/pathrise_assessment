@@ -34,5 +34,8 @@ module PathriseAssessment
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # fix needed to serve assets bc Rail 4+ doesn't on heroku
+    config.serve_static_assets = true
   end
 end
