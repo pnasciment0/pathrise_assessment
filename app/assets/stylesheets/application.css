@@ -13,23 +13,35 @@
  *= require_tree .
  *= require_self
  */
-body {
-  background-color: #eeeeee!important;
+.job-boards-master-wrapper {
+  background-color: #eeeeee;
 }
 
-a {
-  color: black !important;
+.job-board a {
+  color: black;
 }
 
-a:hover{
+.job-board a:hover{
+  color: black;
   text-decoration: none !important;
+}
+
+.job-boards-master-wrapper h1 {
+  padding: 35px 0 0 75px;
+  font-weight: bold;
+}
+
+.job-list-master-wrapper h1 {
+  font-weight: bold;
+  padding: 50px 0 10px 75px;
+  font-size: 28px;
 }
 
 .all-job-boards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 95px 75px;
+  padding: 45px 75px;
 }
 
 .job-board {
@@ -80,6 +92,15 @@ a:hover{
   width: 390px;
   min-height: 165px;
   box-shadow: 1px 1px #dddddd;
+}
+
+.jobs-table-wrapper {
+  width:95%;
+  padding-left:75px;
+}
+
+.jobs-table-wrapper .table tr th {
+  border-top: none;
 }
 
 

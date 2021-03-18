@@ -26,26 +26,28 @@ class JobList extends Component {
         return (
             <div className="job-list-master-wrapper">
                 <h1>Job Source: {this.state.boardName}</h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Company Name</th>
-                            <th>Job Title</th>
-                            <th>Job URL</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.jobs.map(j => 
-                            <tr key={j.id}>
-                                <th>{j.id}</th>
-                                <th>{j.company_name}</th>
-                                <th>{j.job_title}</th> 
-                                <th>{j.url}</th>
-                            </tr>   
-                        )}
-                    </tbody>
-                </table>
+                <div className="jobs-table-wrapper">
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Company Name</th>
+                                <th>Job Title</th>
+                                <th>Job URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.jobs.map(j => 
+                                <tr key={j.id}>
+                                    <td>{j.id}</td>
+                                    <td>{j.company_name}</td>
+                                    <td>{j.job_title}</td> 
+                                    <td><a href={j.url}>{j.url.substring(0, 100) + "..."}</a></td>
+                                </tr>   
+                            )}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }
