@@ -40,7 +40,7 @@ def determineJobSource(company, url)
     if isFromJobBoards?(hostName)
         res = isFromJobBoards?(hostName)
     elsif url.include? cleanedCompany
-        res = "Company Website for #{company}"
+        res = "Company Website"
     else
         res = "Unknown"
     end

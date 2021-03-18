@@ -19,10 +19,8 @@ class JobList extends Component {
                 throw new Error("Error with fetching job opportunities.");
             })
             .then(response => this.setState({jobs: response, boardName: jobBoardName}));
-            // .catch(() => this.props.history.push("/"));
     }
     render () {
-        // const { jobs } = this.state;
         return (
             <div className="job-list-master-wrapper">
                 <h1>Job Source: {this.state.boardName}</h1>
